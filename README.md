@@ -1,6 +1,6 @@
 # twitdrone
 
-Generate music drone from twitter :)
+Shut up, and listen to twitter ...
 
 ## Screencast
 
