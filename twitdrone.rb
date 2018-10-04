@@ -11,6 +11,13 @@ client = Twitter::Streaming::Client.new do |config|
 end
 
 @output = UniMIDI::Output.use(:first)
+@input = UniMIDI::Input.use(:first)
+
+Thread.new {
+  loop do
+    puts @input.gets
+  end
+}
 
 client.sample do |object|
   if object.is_a?(Twitter::Tweet)
